@@ -1,0 +1,12 @@
+frontend:
+  - 'src/**'
+infrastructure:
+  - 'terraform/**'
+  - 'infrastructure/**'
+docs:
+  - 'docs/**'
+dependencies:
+  - 'package.json'
+  - 'package-lock.json'
+
+

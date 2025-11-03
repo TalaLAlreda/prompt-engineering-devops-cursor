@@ -1,0 +1,11 @@
+# Code owners for review requirements
+* @devops-team
+
+# Infra code
+infrastructure/** @platform-team
+terraform/** @platform-team
+
+# App code
+src/** @app-team
+
+

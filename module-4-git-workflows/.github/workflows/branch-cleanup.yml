@@ -1,0 +1,19 @@
+name: Branch Cleanup
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  delete_branch:
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'feature/')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Delete merged feature branch
+      run: |
+        git push origin --delete "${{ github.event.pull_request.head.ref }}"
+
+
